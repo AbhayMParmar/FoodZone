@@ -1,2 +1,2 @@
 # FoodZone
-This is my first  Collage website.
+This is a food website Project.
