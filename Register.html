@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Food</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="icon" href="img/logo-white.png">
+ 
+    <link rel="stylesheet" href="style.css">
+<style>
+    .container{
+              height:50%;
+              width:100%;
+            }
+body{
+     
+           font-family:'Poppins',sans-serif;
+        }
+ 
+#form{
+         height:450px;
+         width:350px;
+         margin:3% auto 0 auto;
+         padding:20px;
+         background-color:#dedede;
+         border-radius:4px;
+         font-size:12px;
+      } 
+#form h1{
+           color:#0f2027;
+           text-align:center;
+         }
+#form button:hover{
+                   background: #151C6A;
+                  }
+
+#form button{
+              padding:10px;
+              margin-top:10px;
+              width:100%;
+              color:white;
+              background-color: #1A237E;
+              border:none;
+              border-radius:4px;
+            }
+.input-control input{
+              border:2px solid #f0f0f0;
+              border-radius:4px;
+              display:block;
+              font-size:12px;
+              padding:10px;
+              width:100%;
+            }         
+</style>
+</head>
+<body>
+<script>
+      function validate()
+      {
+           if(document.myForm.username.value=="")
+           {
+             alert("Please provide your Username!");
+             document.myForm.username.focus();
+             return false;
+           }         
+         
+      if(document.myForm.password.value==""||isNaN(document.myForm.password.value)||
+         document.myForm.password.value.length!=6)
+      {
+           alert("Please Enter the Password");
+           document.myForm.password.focus();
+           return false;
+       }
+       if(document.myForm.password2.value==""||isNaN(document.myForm.password2.value)||
+         document.myForm.password2.value.length!=6)
+      {
+           alert("Please Enter The Confirm Password.");
+           document.myForm.password2.focus();
+           return false;
+       }
+           return(true); 
+        }
+   
+</script>
+
+       <div class="navbar">
+       <div class="nav">    
+         <ul id="main-menu">
+             <li><a href="Home.html">Home</a></li>
+             <li><a class="active" href="Register.html">Register</a></li>
+             <li><a href="Login.html">Login</a></li>
+             <li><a href="Stock.html">Stock</a></li>
+             <li><a href="Aboutus.html">About Us</a></li>
+         </ul>            
+      </div>
+      </div>
+      
+       <div class="container">
+          <form id="form" name="myForm" onsubmit="return(validate());" action="done.html">
+              <h1>Registration</h1>
+              <div class="input-control">
+                  <label for="username">Username</label>
+                  <input id="username" name="username" type="text">
+              </div>
+              <div class="input-control">
+                  <label for="EMail">Email</label>
+                  <input  id="EMail" name="EMail" type="text">
+              </div>
+              <div class="input-control">
+                  <label for="password">Password</label>
+                  <input id="password" name="Password" type="password" >
+              </div>
+              <div class="input-control">
+                  <label for="password">Confirm Password</label>
+                  <input id="password2" name="password2" type="password" >
+              </div>
+               <button  type="submit">Sign Up</button> 
+          </form>
+       </div>
+   
+       <footer> 
+          <div class="bgfooter text-center">
+             <p>Developed by Abhay</p>
+          </div>
+       </footer>
+</body>
+<script src="script.js"></script>
+</html>
